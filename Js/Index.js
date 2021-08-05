@@ -1,6 +1,7 @@
 var eggs = 1;
-var autoclick = 0;
-var Quack = new Audio("SoundEffects/Quack.mp3");
+var ChickenSqueaser = 0;
+var ChickenPuncher = 1;
+var Quack = new Audio("SQuack.mp3");
 
 function EggClicker() {
   eggs = eggs + 1;
@@ -32,17 +33,26 @@ function update() {
   }
 }
 function timer() {
-  eggs = eggs + autoclick + autoclick;
+  eggs = eggs + ChickenSqueaser + ChickenSqueaser + ChickenPuncher * 10;
 
   update();
 }
 setInterval(timer, 1000);
 
 function buyChickenSqueaser() {
-  if (eggs >= (autoclick + 1) * 12) {
-    eggs = eggs - (autoclick + 1) * 12;
-    autoclick = autoclick + 1;
+  if (eggs >= (ChickenSqueaser + 1) * 12) {
+    eggs = eggs - (ChickenSqueaser + 1) * 12;
+    ChickenSqueaser = ChickenSqueaser + 1;
 
     update();
   }
 }
+function buyChickenPuncher() {
+  if (eggs >= (ChickenPuncher + 1) * 100) {
+    eggs = eggs - (ChickenPuncher + 1) * 100;
+    ChickenPuncher = ChickenPuncher + 1;
+
+    update();
+  }
+}
+//eggs Across Screen
