@@ -1,12 +1,13 @@
 var eggs = 1;
 var autoclick = 0;
-var Quack = new Audio("Quack.mp3");
+var Quack = new Audio("SoundEffects/Quack.mp3");
 
 function EggClicker() {
   eggs = eggs + 1;
   document.getElementById("AmountEgg").value = eggs;
   Quack.play();
 }
+//Update
 function update() {
   document.getElementById("AmountEgg").value = eggs;
   if (eggs == 100) {
