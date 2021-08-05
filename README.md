@@ -1,2 +1,0 @@
-# ChickenClicker
-Created with CodeSandbox
