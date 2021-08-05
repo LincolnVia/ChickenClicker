@@ -1,4 +1,4 @@
-var eggs = 1;
+var eggs = 100;
 var autoclick = 0;
 var Quack = new Audio("Quack.mp3");
 
@@ -10,7 +10,7 @@ function update() {
   document.getElementById("AmountEgg").value = eggs;
   if (eggs == 100) {
     Quack.play();
-    setInterval(Quack.stop(), 4000);
+    
   }
 }
 function timer() {
