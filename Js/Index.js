@@ -1,6 +1,6 @@
 var eggs = 1;
 var autoclick = 0;
-var Quack = new Audio("SoundEffects/Quack.mp3");
+var Quack = new Audio("Quack.mp3");
 
 function EggClicker() {
   eggs = eggs + 1;
