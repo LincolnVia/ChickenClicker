@@ -5,6 +5,7 @@ var Quack = new Audio("SoundEffects/Quack.mp3");
 function EggClicker() {
   eggs = eggs + 1;
   document.getElementById("AmountEgg").value = eggs;
+  Quack.play();
 }
 function update() {
   document.getElementById("AmountEgg").value = eggs;
