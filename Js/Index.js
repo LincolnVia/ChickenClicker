@@ -1,4 +1,4 @@
-var eggs = 0;
+var eggs = 1;
 var ChickenSqueaser = 0;
 var ChickenPuncher = 0;
 var Quack = new Audio("Quack.mp3");
