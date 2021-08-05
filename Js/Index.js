@@ -9,7 +9,7 @@ function update() {
   document.getElementById("AmountEgg").value = eggs;
 }
 function timer() {
-  eggs = eggs + autoclick;
+  eggs = eggs + autoclick + autoclick;
 
   update();
 }
