@@ -9,8 +9,8 @@ function EggClicker() {
 function update() {
   document.getElementById("AmountEgg").value = eggs;
   if (eggs == 100) {
+   Quack.loop = false;
     Quack.play();
-    setInterval(Quack.stop(), 4000);
     
   }
 }
