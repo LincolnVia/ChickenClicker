@@ -1,4 +1,4 @@
-var eggs = 1;
+var eggs = 100;
 var ChickenSqueaser = 0;
 var ChickenPuncher = 0;
 var Quack = new Audio("Quack.mp3");
@@ -11,11 +11,18 @@ function EggClicker() {
 //Update
 function update() {
   document.getElementById("AmountEgg").value = eggs;
+  document.getElementById("PuncherCost").value = ChickenPuncher * 200;
+  document.getElementById("SqueaserCost").value = ChickenSqueaser * 24;
+  if (eggs == 1) {
+    document.getElementById("PuncherCost").value = 100;
+    document.getElementById("SqueaserCost").value = 12;
+  }
   if (eggs == 100) {
     Quack.loop = false;
     Quack.play();
     eggs = 101;
   }
+
   if (eggs == 101) {
     Quack.loop = false;
     Quack.play();
@@ -55,4 +62,8 @@ function buyChickenPuncher() {
     update();
   }
 }
-//eggs Across Screen
+
+function start() {
+  document.getElementById("PuncherCost").value = 100;
+  document.getElementById("SqueaserCost").value = 12;
+}
