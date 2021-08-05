@@ -3,15 +3,14 @@
   position: relative;
 }
 
-
 #AmountEgg {
   width: 150px;
 }
 body {
   text-align: center;
   position: relative;
-background-color: lightblue;
-height:120%;
+  background-color: lightblue;
+  height: 120%;
 }
 #Game {
   height: 100%;
@@ -30,11 +29,18 @@ height:120%;
 }
 #Upgrades {
   text-align: left;
+  right: 40px;
+  position: relative;
 }
-#Credits
-{
-text-align: center;
-top: 90px;
+#Credits {
+  text-align: center;
+  top: 55px;
 
-position: relative;
+  position: relative;
+}
+#LincolnVia {
+  text-align: center;
+  top: 78px;
+
+  position: relative;
 }
