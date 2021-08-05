@@ -1,4 +1,4 @@
-var eggs = 100;
+var eggs = 1;
 var autoclick = 0;
 var Quack = new Audio("Quack.mp3");
 
