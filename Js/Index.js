@@ -10,6 +10,7 @@ function update() {
   document.getElementById("AmountEgg").value = eggs;
   if (eggs == 100) {
     Quack.play();
+    setInterval(Quack.stop(), 4000);
     
   }
 }
