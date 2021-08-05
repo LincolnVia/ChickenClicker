@@ -1,0 +1,40 @@
+#Title {
+  text-align: center;
+  position: relative;
+}
+
+
+#AmountEgg {
+  width: 150px;
+}
+body {
+  text-align: center;
+  position: relative;
+background-color: lightblue;
+height:120%;
+}
+#Game {
+  height: 100%;
+}
+#Title {
+  color: wheat;
+}
+#YouHave {
+  color: wheat;
+}
+#ClearButton {
+  background-color: transparent;
+  stroke: transparent;
+  outline: transparent;
+  border: 0px;
+}
+#Upgrades {
+  text-align: left;
+}
+#Credits
+{
+text-align: center;
+top: 90px;
+
+position: relative;
+}
