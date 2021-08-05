@@ -11,25 +11,30 @@
     <script type="text/javascript"></script>
   </head>
   <body>
- <!--Game Stuff-->
- <canvas
- id="canvas"
- ></canvas>
-    <div style="background-image: url('imgs/ChickenFarm.jpg'); id="Game">
+    <!--Game Stuff-->
+    <canvas id="canvas"></canvas>
+    <div style="background-image: url('imgs/ChickenFarm.jpg');" id="Game">
       <h1 id="Title">Click the Chicken to get eggs</h1>
 
-      <h3 id="YouHave">You Have <input type="text" id="AmountEgg" disabled />eggs</h3>
-      <button id="ClearButton" ><img src="imgs/ChickenCLicker.png" onclick="EggClicker()" /></button>
+      <h3 id="YouHave">
+        You Have <input type="text" id="AmountEgg" disabled />eggs
+      </h3>
+      <button id="ClearButton">
+        <img src="imgs/ChickenCLicker.png" onclick="EggClicker()" />
+      </button>
     </div>
-  <div id="Upgrades">
-  <ul>
-  <button onclick="buyChickenSqueaser()">Chicken Squeaser</button>
-  <button onclick="buyChickenPuncher()">Chicken Puncher</button>
-  </ul>
-  
-  </div>
-<!--Game Stuff End-->
-  <h3 id="LincolnVia">Lincoln Via</h3>
-  <h3 id="Credits">This was made with no stolen code unlike popular belief</h3>
-</body>
+    <div id="Upgrades">
+      <ul>
+        <li>
+          <button onclick="buyChickenSqueaser()">Chicken Squeaser</button>
+        </li>
+        <button onclick="buyChickenPuncher()">Chicken Puncher</button>
+      </ul>
+    </div>
+    <!--Game Stuff End-->
+    <h3 id="LincolnVia">Lincoln Via</h3>
+    <h3 id="Credits">
+      This was made with no stolen code unlike popular belief
+    </h3>
+  </body>
 </html>
