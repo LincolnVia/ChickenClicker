@@ -10,11 +10,10 @@ body {
   text-align: center;
   position: relative;
   background-color: lightblue;
-  height: 120%;
-}
-#Game {
   height: 100%;
+  overflow: hidden;
 }
+
 #Title {
   color: wheat;
 }
@@ -43,4 +42,10 @@ body {
   top: 78px;
 
   position: relative;
+}
+#SqueaserCost {
+  width: 50px;
+}
+#PuncherCost {
+  width: 60px;
 }
