@@ -86,10 +86,13 @@ function Save() {
   localStorage.setItem("eggs", eggs);
   localStorage.setItem("Sqeaser", ChickenSqueaser);
   localStorage.setItem("Puncher", ChickenPuncher);
+  localStorage.setItem("Stabber", ChickenStabber);
 }
 function Load() {
   eggs = localStorage.getItem("eggs");
   eggs = parseInt(eggs);
+  ChickenStabber = localStorage.getItem("Stabber");
+  ChickenStabber = parseInt(ChickenStabber);
   ChickenSqueaser = localStorage.getItem("Sqeaser");
   ChickenSqueaser = parseInt(ChickenSqueaser);
   ChickenPuncher = localStorage.getItem("Puncher");
