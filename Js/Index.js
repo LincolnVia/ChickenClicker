@@ -67,3 +67,11 @@ function start() {
   document.getElementById("PuncherCost").value = 100;
   document.getElementById("SqueaserCost").value = 12;
 }
+function Save() {
+  localStorage.setItem("eggs", eggs);
+}
+function Load() {
+  eggs = localStorage.getItem(eggs);
+  eggs = parseInt(eggs);
+  document.getElementById("AmountEgg").value = eggs;
+}
