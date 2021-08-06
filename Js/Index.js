@@ -71,7 +71,7 @@ function Save() {
   localStorage.setItem("eggs", eggs);
 }
 function Load() {
-  eggs = localStorage.getItem(eggs);
+  eggs = localStorage.getItem("eggs");
   eggs = parseInt(eggs);
   document.getElementById("AmountEgg").value = eggs;
 }
