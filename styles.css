@@ -1,6 +1,8 @@
 #Title {
+  top: 5px;
   text-align: center;
   position: relative;
+  color: wheat;
 }
 
 #AmountEgg {
@@ -10,13 +12,9 @@ body {
   text-align: center;
   position: relative;
   background-color: lightblue;
-  height: 100%;
-  overflow: hidden;
+  margin: 0;
 }
 
-#Title {
-  color: wheat;
-}
 #YouHave {
   color: wheat;
 }
@@ -33,13 +31,13 @@ body {
 }
 #Credits {
   text-align: center;
-  top: 55px;
+  top: 5px;
 
   position: relative;
 }
 #LincolnVia {
   text-align: center;
-  top: 78px;
+  top: 40px;
 
   position: relative;
 }
@@ -48,4 +46,14 @@ body {
 }
 #PuncherCost {
   width: 60px;
+}
+#Save {
+  font-size: 15px;
+  bottom: 23px;
+  position: relative;
+}
+#Load {
+  font-size: 15px;
+  bottom: 23px;
+  position: relative;
 }
