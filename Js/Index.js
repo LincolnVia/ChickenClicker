@@ -14,7 +14,7 @@ function update() {
   document.getElementById("AmountEgg").value = eggs;
   document.getElementById("PuncherCost").value = ChickenPuncher * 200;
   document.getElementById("SqueaserCost").value = ChickenSqueaser * 24;
-  document.getElementById("StabberCost").value = ChickenStabber * 2000;
+  document.getElementById("StabberCost").value = ChickenStabber * 1000;
   if (eggs == 1) {
     document.getElementById("PuncherCost").value = 100;
     document.getElementById("SqueaserCost").value = 12;
