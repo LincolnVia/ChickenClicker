@@ -69,9 +69,16 @@ function start() {
 }
 function Save() {
   localStorage.setItem("eggs", eggs);
+  localStorage.setItem("Sqeaser", ChickenSqueaser);
+  localStorage.setItem("Puncher", ChickenPuncher);
 }
 function Load() {
   eggs = localStorage.getItem("eggs");
   eggs = parseInt(eggs);
+  ChickenSqueaser = localStorage.getItem("Sqeaser");
+  ChickenSqueaser = parseInt(ChickenSqueaser);
+  ChickenPuncher = localStorage.getItem("Puncher");
+  ChickenPuncher = parseInt(ChickenPuncher);
+
   document.getElementById("AmountEgg").value = eggs;
 }
