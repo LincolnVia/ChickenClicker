@@ -1,6 +1,7 @@
 var eggs = 1;
 var ChickenSqueaser = 0;
 var ChickenPuncher = 0;
+var ChickenStabber = 0;
 var Quack = new Audio("Quack.mp3");
 
 function EggClicker() {
@@ -13,9 +14,11 @@ function update() {
   document.getElementById("AmountEgg").value = eggs;
   document.getElementById("PuncherCost").value = ChickenPuncher * 200;
   document.getElementById("SqueaserCost").value = ChickenSqueaser * 24;
+  document.getElementById("StabberCost").value = ChickenStabber * 2000;
   if (eggs == 1) {
     document.getElementById("PuncherCost").value = 100;
     document.getElementById("SqueaserCost").value = 12;
+    document.getElementById("StabberCost").value = 1000;
   }
   if (eggs == 100) {
     Quack.loop = false;
@@ -40,7 +43,12 @@ function update() {
   }
 }
 function timer() {
-  eggs = eggs + ChickenSqueaser + ChickenSqueaser + ChickenPuncher * 10;
+  eggs =
+    eggs +
+    ChickenSqueaser +
+    ChickenSqueaser +
+    ChickenPuncher * 10 +
+    ChickenStabber * 100;
 
   update();
 }
@@ -62,7 +70,14 @@ function buyChickenPuncher() {
     update();
   }
 }
+function buyChickenStabber() {
+  if (eggs >= (ChickenStabber + 1) * 1000) {
+    eggs = eggs - (ChickenStabber + 1) * 1000;
+    ChickenStabber = ChickenStabber + 1;
 
+    update();
+  }
+}
 function start() {
   document.getElementById("PuncherCost").value = 100;
   document.getElementById("SqueaserCost").value = 12;
