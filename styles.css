@@ -52,15 +52,18 @@ body {
 }
 #Save {
   font-size: 15px;
-  bottom: 23%;
+  bottom: 13px;
   position: relative;
 }
 #Load {
   font-size: 15px;
-  bottom: 23%;
+  bottom: 13px;
   position: relative;
 }
 #Chicken {
   width: 500px;
 }
-
+#email {
+  bottom: 10px;
+  position: relative;
+}
