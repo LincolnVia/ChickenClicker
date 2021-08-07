@@ -5,8 +5,15 @@
   color: wheat;
 }
 
+#Eps {
+  color: black;
+  width: 200px;
+  text-align: center;
+  position: relative;
+}
 #AmountEgg {
   width: 150px;
+  color: black;
 }
 body {
   text-align: center;
