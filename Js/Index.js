@@ -2,16 +2,18 @@ var eggs = 10000;
 var ChickenSqueaser = 0;
 var ChickenPuncher = 0;
 var ChickenStabber = 0;
+var Fork = 1;
 var Quack = new Audio("Quack.mp3");
 
 function EggClicker() {
-  eggs = eggs + 1;
+  eggs = eggs + 1 * Fork;
   document.getElementById("AmountEgg").value = eggs;
   Quack.play();
 }
 //Update
 function update() {
   document.getElementById("AmountEgg").value = eggs;
+  document.getElementById("ForkCost").value = Fork * 5;
   document.getElementById("PuncherCost").value = ChickenPuncher * 200;
   document.getElementById("SqueaserCost").value = ChickenSqueaser * 24;
   document.getElementById("StabberCost").value = ChickenStabber * 2000;
@@ -24,6 +26,7 @@ function update() {
     document.getElementById("PuncherCost").value = 100;
     document.getElementById("SqueaserCost").value = 12;
     document.getElementById("StabberCost").value = 1000;
+    document.getElementById("ForkCost").value = 5;
   }
   if (eggs == 100) {
     Quack.loop = false;
@@ -83,16 +86,26 @@ function buyChickenStabber() {
     update();
   }
 }
+function buyFork() {
+  if (eggs >= (Fork + 1) * 5) {
+    eggs = eggs - (Fork + 1) * 5;
+    Fork = Fork + 1;
 
+    update();
+  }
+}
 function Save() {
   localStorage.setItem("eggs", eggs);
   localStorage.setItem("Sqeaser", ChickenSqueaser);
   localStorage.setItem("Puncher", ChickenPuncher);
   localStorage.setItem("Stabber", ChickenStabber);
+  localStorage.setItem("Fork", Fork);
 }
 function Load() {
   eggs = localStorage.getItem("eggs");
   eggs = parseInt(eggs);
+  ChickenStabber = localStorage.getItem("Fork");
+  ChickenStabber = parseInt(Fork);
   ChickenStabber = localStorage.getItem("Stabber");
   ChickenStabber = parseInt(ChickenStabber);
   ChickenSqueaser = localStorage.getItem("Sqeaser");
