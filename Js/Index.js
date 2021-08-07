@@ -1,4 +1,4 @@
-var eggs = 1;
+var eggs = 10000;
 var ChickenSqueaser = 0;
 var ChickenPuncher = 0;
 var ChickenStabber = 0;
@@ -14,7 +14,12 @@ function update() {
   document.getElementById("AmountEgg").value = eggs;
   document.getElementById("PuncherCost").value = ChickenPuncher * 200;
   document.getElementById("SqueaserCost").value = ChickenSqueaser * 24;
-  document.getElementById("StabberCost").value = ChickenStabber * 1000;
+  document.getElementById("StabberCost").value = ChickenStabber * 2000;
+  document.getElementById("Eps").value =
+    ChickenSqueaser +
+    ChickenPuncher * 10 +
+    ChickenStabber * 100 +
+    "  Eggs Per Second";
   if (eggs == 1) {
     document.getElementById("PuncherCost").value = 100;
     document.getElementById("SqueaserCost").value = 12;
@@ -78,10 +83,7 @@ function buyChickenStabber() {
     update();
   }
 }
-function start() {
-  document.getElementById("PuncherCost").value = 100;
-  document.getElementById("SqueaserCost").value = 12;
-}
+
 function Save() {
   localStorage.setItem("eggs", eggs);
   localStorage.setItem("Sqeaser", ChickenSqueaser);
