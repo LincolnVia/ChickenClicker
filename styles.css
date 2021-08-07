@@ -57,6 +57,9 @@ body {
 #StabberCost {
   width: 60px;
 }
+#ForkCost {
+  width: 60px;
+}
 #Save {
   font-size: 15px;
   bottom: 13px;
