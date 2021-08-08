@@ -1,4 +1,4 @@
-var eggs = 10000;
+var eggs = 1;
 var ChickenSqueaser = 0;
 var ChickenPuncher = 0;
 var ChickenStabber = 0;
@@ -13,7 +13,7 @@ function EggClicker() {
 //Update
 function update() {
   document.getElementById("AmountEgg").value = eggs;
-  document.getElementById("ForkCost").value = Fork * 5;
+  document.getElementById("ForkCost").value = Fork * 15;
   document.getElementById("PuncherCost").value = ChickenPuncher * 200;
   document.getElementById("SqueaserCost").value = ChickenSqueaser * 24;
   document.getElementById("StabberCost").value = ChickenStabber * 2000;
@@ -22,12 +22,7 @@ function update() {
     ChickenPuncher * 10 +
     ChickenStabber * 100 +
     "  Eggs Per Second";
-  if (eggs == 1) {
-    document.getElementById("PuncherCost").value = 100;
-    document.getElementById("SqueaserCost").value = 12;
-    document.getElementById("StabberCost").value = 1000;
-    document.getElementById("ForkCost").value = 5;
-  }
+
   if (eggs == 100) {
     Quack.loop = false;
     Quack.play();
@@ -87,8 +82,8 @@ function buyChickenStabber() {
   }
 }
 function buyFork() {
-  if (eggs >= (Fork + 1) * 5) {
-    eggs = eggs - (Fork + 1) * 5;
+  if (eggs >= (Fork + 1) * 15) {
+    eggs = eggs - (Fork + 1) * 15;
     Fork = Fork + 1;
 
     update();
