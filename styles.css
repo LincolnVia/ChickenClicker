@@ -48,6 +48,7 @@ body {
 
   position: relative;
 }
+/* Automatic clicker Upgrades*/
 #SqueaserCost {
   width: 50px;
 }
@@ -57,9 +58,14 @@ body {
 #StabberCost {
   width: 60px;
 }
+#SwingerCost {
+  width: 60px;
+}
+/* Manual clicker Upgrades*/
 #ForkCost {
   width: 60px;
 }
+/* Etc */
 #Save {
   font-size: 15px;
   bottom: 13px;
