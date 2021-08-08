@@ -2,7 +2,6 @@ var eggs = 1;
 var ChickenSqueaser = 0;
 var ChickenPuncher = 0;
 var ChickenStabber = 0;
-
 var Fork = 1;
 var Quack = new Audio("Quack.mp3");
 
@@ -29,7 +28,7 @@ function update() {
     document.getElementById("SqueaserCost").value = 12;
     document.getElementById("StabberCost").value = 1000;
     document.getElementById("ForkCost").value = 5;
-    document.getElementById("ForkCost").value = 5;
+
   }
   if (eggs == 100) {
     Quack.loop = false;
@@ -103,7 +102,6 @@ function Save() {
   localStorage.setItem("Sqeaser", ChickenSqueaser);
   localStorage.setItem("Puncher", ChickenPuncher);
   localStorage.setItem("Stabber", ChickenStabber);
-    localStorage.setItem("Swinger", ChickenSwinger);
   localStorage.setItem("Fork", Fork);
   
 }
