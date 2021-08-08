@@ -23,7 +23,6 @@ function update() {
     ChickenSqueaser +
     ChickenPuncher * 10 +
     ChickenStabber * 100 +
-    ChickenSwinger * 1000 +
     "  Eggs Per Second";
   if (eggs == 1) {
     document.getElementById("PuncherCost").value = 100;
