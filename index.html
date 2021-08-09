@@ -11,7 +11,7 @@
 
     <script type="text/javascript"></script>
   </head>
-  <body>
+  <body onload="StopCrash()">
     <!--Game Stuff-->
 
     <div style="background-image: url('imgs/ChickenFarm.jpg');" id="Game">
@@ -49,9 +49,11 @@
           Chicken Stabber
           <input type="text" id="StabberCost" disabled />
         </button>
-        
       </ul>
     </div>
+    <!--Prestige System-->
+    <button onclick="PrestigeUp()" id="Prestige">Prestige</button>
+    <!--Prestige System End-->
 
     <!--Game Stuff End-->
     <div id="Credits">
