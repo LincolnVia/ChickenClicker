@@ -114,7 +114,7 @@ function PrestigeUp() {
   if (eggs >= (Prestige + 1) * 100000) {
     eggs = eggs - eggs;
     Prestige = Prestige + 1;
-    Fork = Fork - Fork;
+    Fork = Fork - Fork + 1;
     ChickenStabber = ChickenStabber - ChickenStabber;
     ChickenPuncher = ChickenPuncher - ChickenPuncher;
     ChickenSqueaser = ChickenSqueaser - ChickenSqueaser;
