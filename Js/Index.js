@@ -3,10 +3,11 @@ var ChickenSqueaser = 0;
 var ChickenPuncher = 0;
 var ChickenStabber = 0;
 var Fork = 1;
+var Prestige = 1;
 var Quack = new Audio("Quack.mp3");
 
 function EggClicker() {
-  eggs = eggs + 1 * Fork;
+  eggs = eggs + 1 * Fork * Prestige;
   document.getElementById("AmountEgg").value = eggs;
   Quack.play();
 }
@@ -17,7 +18,7 @@ function update() {
   document.getElementById("PuncherCost").value = ChickenPuncher * 200;
   document.getElementById("SqueaserCost").value = ChickenSqueaser * 24;
   document.getElementById("StabberCost").value = ChickenStabber * 2000;
- 
+
   document.getElementById("Eps").value =
     ChickenSqueaser +
     ChickenPuncher * 10 +
@@ -28,7 +29,6 @@ function update() {
     document.getElementById("SqueaserCost").value = 12;
     document.getElementById("StabberCost").value = 1000;
     document.getElementById("ForkCost").value = 5;
-
   }
   if (eggs == 100) {
     Quack.loop = false;
@@ -58,11 +58,24 @@ function timer() {
     ChickenSqueaser +
     ChickenSqueaser +
     ChickenPuncher * 10 +
-    ChickenStabber * 100;
+    ChickenStabber * 100 * Prestige;
 
   update();
 }
+function StopCrash() {
+  localStorage.setItem("Prestige", Prestige);
+}
+
+function AutoSave() {
+  localStorage.setItem("eggs", eggs);
+  localStorage.setItem("Sqeaser", ChickenSqueaser);
+  localStorage.setItem("Puncher", ChickenPuncher);
+  localStorage.setItem("Stabber", ChickenStabber);
+  localStorage.setItem("Fork", Fork);
+  localStorage.setItem("Prestige", Prestige);
+}
 setInterval(timer, 1000);
+setInterval(AutoSave, 100000);
 
 function buyChickenSqueaser() {
   if (eggs >= (ChickenSqueaser + 1) * 12) {
@@ -97,19 +110,28 @@ function buyFork() {
     update();
   }
 }
+function PrestigeUp() {
+  if (eggs >= (Prestige + 1) * 10000) {
+    eggs = eggs - eggs;
+    Prestige = Prestige + 1;
+
+    update();
+  }
+}
 function Save() {
   localStorage.setItem("eggs", eggs);
   localStorage.setItem("Sqeaser", ChickenSqueaser);
   localStorage.setItem("Puncher", ChickenPuncher);
   localStorage.setItem("Stabber", ChickenStabber);
   localStorage.setItem("Fork", Fork);
-  
+  localStorage.setItem("Prestige", Prestige);
 }
 function Load() {
   eggs = localStorage.getItem("eggs");
   eggs = parseInt(eggs);
- 
-  
+  Prestige = localStorage.getItem("Prestige");
+  Prestige = parseInt(Prestige);
+
   Fork = localStorage.getItem("Fork");
   Fork = parseInt(Fork);
   ChickenStabber = localStorage.getItem("Stabber");
@@ -119,6 +141,5 @@ function Load() {
   ChickenPuncher = localStorage.getItem("Puncher");
   ChickenPuncher = parseInt(ChickenPuncher);
 
- 
   document.getElementById("AmountEgg").value = eggs;
 }
