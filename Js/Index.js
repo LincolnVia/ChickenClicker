@@ -5,7 +5,7 @@ var ChickenStabber = 0;
 var Fork = 1;
 var Prestige = 1;
 var Quack = new Audio("Quack.mp3");
-
+var x = event.key;
 function EggClicker() {
   eggs = eggs + 1 * Fork * Prestige;
   document.getElementById("AmountEgg").value = eggs;
@@ -13,11 +13,13 @@ function EggClicker() {
 }
 //Update
 function update() {
-  $(document).keyup(function(event) {
-    if (event.which === 32) {
-       EggClicker();
-    }
-});
+
+
+// If the pressed keyboard button is "a" or "A" (using caps lock or shift), alert some text.
+
+if (x == "Space") {
+  EggClicker();
+}
   document.getElementById("AmountEgg").value = eggs;
   document.getElementById("ForkCost").value = Fork * 5;
   document.getElementById("PuncherCost").value = ChickenPuncher * 200;
