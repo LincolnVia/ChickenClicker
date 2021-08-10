@@ -3,7 +3,7 @@ var ChickenSqueaser = 0;
 var ChickenPuncher = 0;
 var ChickenStabber = 0;
 var Fork = 1;
-var Prestige = 2;
+var Prestige = 1;
 var Quack = new Audio("Quack.mp3");
 
 function EggClicker() {
