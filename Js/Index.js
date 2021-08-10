@@ -22,7 +22,7 @@ function update() {
   document.getElementById("Eps").value =
     ChickenSqueaser +
     ChickenPuncher * 10 +
-    ChickenStabber * 100 +
+    ChickenStabber * 100 * Prestige +
     "  Eggs Per Second";
   if (eggs == 1) {
     document.getElementById("PuncherCost").value = 100;
