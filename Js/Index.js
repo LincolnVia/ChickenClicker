@@ -3,7 +3,7 @@ var ChickenSqueaser = 0;
 var ChickenPuncher = 0;
 var ChickenStabber = 0;
 var Fork = 1;
-var Prestige = 1;
+var Prestige = 2;
 var Quack = new Audio("Quack.mp3");
 
 function EggClicker() {
@@ -20,9 +20,7 @@ function update() {
   document.getElementById("StabberCost").value = ChickenStabber * 2000;
 
   document.getElementById("Eps").value =
-    ChickenSqueaser +
-    ChickenPuncher * 10 +
-    ChickenStabber * 100 * Prestige +
+    (ChickenSqueaser + ChickenPuncher * 10 + ChickenStabber * 100) * Prestige +
     "  Eggs Per Second";
   if (eggs == 1) {
     document.getElementById("PuncherCost").value = 100;
@@ -111,13 +109,9 @@ function buyFork() {
   }
 }
 function PrestigeUp() {
-  if (eggs >= (Prestige + 1) * 100000) {
+  if (eggs >= (Prestige + 1) * 10000) {
     eggs = eggs - eggs;
     Prestige = Prestige + 1;
-    Fork = Fork - Fork + 1;
-    ChickenStabber = ChickenStabber - ChickenStabber;
-    ChickenPuncher = ChickenPuncher - ChickenPuncher;
-    ChickenSqueaser = ChickenSqueaser - ChickenSqueaser;
 
     update();
   }
