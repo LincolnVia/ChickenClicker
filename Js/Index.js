@@ -114,7 +114,7 @@ function PrestigeUp() {
     Prestige = Prestige + 1;
      ChickenPuncher = ChickenPuncher - ChickenPuncher;
     ChickenSqueaser = ChickenSqueaser - ChickenSqueaser;
-    Fork = Fork - Fork;
+    Fork = Fork - Fork + 1;
     ChickenStabber = ChickenStabber - ChickenStabber;
 
 
