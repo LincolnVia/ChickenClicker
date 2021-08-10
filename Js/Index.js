@@ -13,6 +13,11 @@ function EggClicker() {
 }
 //Update
 function update() {
+  $(document).keyup(function(event) {
+    if (event.which === 32) {
+       EggClicker();
+    }
+});
   document.getElementById("AmountEgg").value = eggs;
   document.getElementById("ForkCost").value = Fork * 5;
   document.getElementById("PuncherCost").value = ChickenPuncher * 200;
