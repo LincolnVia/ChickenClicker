@@ -109,7 +109,7 @@ function buyFork() {
   }
 }
 function PrestigeUp() {
-  if (eggs >= (Prestige + 1) * 10000) {
+  if (eggs >= (Prestige + 1) * 100000) {
     eggs = eggs - eggs;
     Prestige = Prestige + 1;
 
