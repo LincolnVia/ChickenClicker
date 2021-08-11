@@ -14,9 +14,10 @@ function EggClicker() {
 function timer() {
   eggs =
     eggs +
-    ChickenSqueaser * 2 +
-    ChickenPuncher * 10 +
-    ChickenStabber * 100;
+    (ChickenSqueaser +
+    ChickenSqueaser) +
+    (ChickenPuncher * 10) +
+    (ChickenStabber * 100) * Prestige;
 
   update();
 }
@@ -38,7 +39,7 @@ function update() {
   
 
    }
-setInterval(timer, 1000);
+
 }
 
 function StopCrash() {
@@ -101,6 +102,7 @@ function PrestigeUp() {
     update();
   }
 }
+  setInterval(timer, 1000);
 function Save() {
   localStorage.setItem("eggs", eggs);
   localStorage.setItem("Sqeaser", ChickenSqueaser);
