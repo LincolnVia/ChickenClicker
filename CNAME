@@ -1,1 +1,11 @@
-www.chickenclicker.cf
+{
+  "description": "A Game About Chickens",
+  "repo": "https://github.com/EvaZeVolt/ChickenClicker/",
+  "owner": {
+    "username": "LincolnVia",
+    "email": "supinelincoln2@gmail.com"
+  },
+  "record": {
+    "CNAME": "evazevolt.github.io"
+  }
+}
