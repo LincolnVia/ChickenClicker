@@ -11,6 +11,15 @@ function EggClicker() {
   document.getElementById("AmountEgg").value = eggs;
   Quack.play();
 }
+function timer() {
+  eggs =
+    eggs +
+    ChickenSqueaser * 2 +
+    ChickenPuncher * 10 +
+    ChickenStabber * 100;
+
+  update();
+}
 //Update
 function update() {
 
@@ -25,44 +34,13 @@ function update() {
   document.getElementById("Eps").value =
     (ChickenSqueaser + ChickenPuncher * 10 + ChickenStabber * 100) * Prestige +
     "  Eggs Per Second";
-  if (eggs == 1) {
-    document.getElementById("PuncherCost").value = 100;
-    document.getElementById("SqueaserCost").value = 12;
-    document.getElementById("StabberCost").value = 1000;
-    document.getElementById("ForkCost").value = 5;
-  }
-  if (eggs == 100) {
-    Quack.loop = false;
-    Quack.play();
-    eggs = 101;
-  }
+  
+  
 
-  if (eggs == 101) {
-    Quack.loop = false;
-    Quack.play();
-    eggs = 102;
-  }
-  if (eggs == 102) {
-    Quack.loop = false;
-    Quack.play();
-    eggs = 103;
-  }
-  if (eggs == 103) {
-    Quack.loop = false;
-    Quack.play();
-    eggs = 104;
-  }
+   }
+setInterval(timer, 1000);
 }
-function timer() {
-  eggs =
-    
-    ChickenSqueaser +
-    ChickenSqueaser +
-    ChickenPuncher * 10 +
-    ChickenStabber * 100 * Prestige + eggs;
 
-  update();
-}
 function StopCrash() {
   localStorage.setItem("Prestige", Prestige);
 }
@@ -74,8 +52,7 @@ function AutoSave() {
   localStorage.setItem("Stabber", ChickenStabber);
   localStorage.setItem("Fork", Fork);
   localStorage.setItem("Prestige", Prestige);
-}
-setInterval(timer, 1000);
+
 
 
 function buyChickenSqueaser() {
