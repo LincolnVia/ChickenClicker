@@ -13,11 +13,11 @@ function EggClicker() {
 }
 function timer() {
   eggs =
-    eggs +
-    (ChickenSqueaser +
-    ChickenSqueaser) +
-    (ChickenPuncher * 10) +
-    (ChickenStabber * 100) * Prestige;
+    (eggs +
+    ChickenSqueaser +
+    ChickenSqueaser +
+    ChickenPuncher * 10 +
+    ChickenStabber * 100) * Prestige;
 
   update();
 }
