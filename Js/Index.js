@@ -15,11 +15,7 @@ function EggClicker() {
 function update() {
 
 
-// If the pressed keyboard button is "a" or "A" (using caps lock or shift), alert some text.
 
-if (x == "Space") {
-  EggClicker();
-}
   document.getElementById("AmountEgg").value = eggs;
   document.getElementById("ForkCost").value = Fork * 5;
   document.getElementById("PuncherCost").value = ChickenPuncher * 200;
