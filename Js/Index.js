@@ -109,12 +109,12 @@ function buyFork() {
   }
 }
 function PrestigeUp() {
-  if (eggs >= (Prestige + 1) * 10000) {
-    eggs = eggs - eggs;
+  if (eggs >= (Prestige + 1) * 500000) {
+    eggs = eggs - eggs + 1;
     Prestige = Prestige + 1;
     ChickenPuncher = ChickenPuncher - ChickenPuncher;
     ChickenSqueaser = ChickenSqueaser - ChickenSqueaser;
-    Fork = Fork - Fork;
+    Fork = Fork - Fork + 1;
     ChickenStabber = ChickenStabber - ChickenStabber;
 
     update();
