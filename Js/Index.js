@@ -5,7 +5,7 @@ var ChickenStabber = 0;
 var Fork = 1;
 var Prestige = 1;
 var Quack = new Audio("Quack.mp3");
-var x = event.key;
+
 function EggClicker() {
   eggs = eggs + 1 * Fork * Prestige;
   document.getElementById("AmountEgg").value = eggs;
@@ -55,11 +55,11 @@ function update() {
 }
 function timer() {
   eggs =
-    eggs +
+    
     ChickenSqueaser +
     ChickenSqueaser +
     ChickenPuncher * 10 +
-    ChickenStabber * 100 * Prestige;
+    ChickenStabber * 100 * Prestige + eggs;
 
   update();
 }
