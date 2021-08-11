@@ -73,7 +73,7 @@ function AutoSave() {
   localStorage.setItem("Prestige", Prestige);
 }
 setInterval(timer, 1000);
-setInterval(AutoSave, 100000);
+
 
 function buyChickenSqueaser() {
   if (eggs >= (ChickenSqueaser + 1) * 12) {
